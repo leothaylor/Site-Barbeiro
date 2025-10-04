@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Barbeiro Delivery | Rio das Pedras • Freguesia • Barra</title>
+  <meta name="description" content="Cortes masculinos a domicílio com horário marcado. Preços transparentes, agenda organizada e atendimento profissional.">
+  <meta property="og:title" content="Barbeiro Delivery — Agenda e Preços" />
+  <meta property="og:description" content="Cortes a domicílio com horário marcado. Valores por região, pacotes mensais e contato por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <!-- Usando preconnect correto e carregando Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Configuração da fonte Inter e classes utilitárias */
+    :root {
+      font-family: 'Inter', sans-serif;
+    }
+    .badge { @apply inline-block rounded-full px-3 py-1 text-xs font-semibold bg-gray-100 text-gray-700; }
+    /* Card aprimorado com sombra e bordas mais definidas */
+    .card { @apply rounded-2xl border border-gray-200 bg-white shadow-lg transition duration-300 hover:shadow-xl; }
+    /* Adicionando um destaque sutil para serviços premium/delivery */
+    .card.premium { @apply border-emerald-300 shadow-emerald-100/50 hover:shadow-emerald-200/50; }
+    .h1 { @apply text-3xl md:text-5xl font-extrabold tracking-tight leading-tight; }
+    .h2 { @apply text-2xl md:text-3xl font-bold; }
+    .h3 { @apply text-xl font-semibold; }
+    .pill { @apply px-2.5 py-0.5 rounded-full text-xs font-medium; }
+    .ok { @apply bg-green-100 text-green-700; }
+    .warn { @apply bg-yellow-100 text-yellow-700; }
+    .danger { @apply bg-red-100 text-red-700; }
+    /* Estilização para listas de preços */
+    .price-list li { @apply flex justify-between items-center py-1 border-b border-gray-100 last:border-b-0; }
+    .price-list strong { @apply text-emerald-600 font-bold; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <!-- Variáveis de placeholder simuladas -->
+  <script>
+    const MOCK_WHATSAPP = '5521982808635';
+    // AJUSTADO: Instagram para o handle correto
+    const MOCK_INSTAGRAM = 'luisleonardofigueiredo';
+    const WHATSAPP_LINK = `https://wa.me/${MOCK_WHATSAPP}?text=Olá!%20Quero%20agendar%20um%20corte.`;
+    const INSTAGRAM_LINK = `https://instagram.com/${MOCK_INSTAGRAM}`;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Atualiza todos os links do WhatsApp
+      document.querySelectorAll('a[href*="SEU_NUMERO_AQUI"]').forEach(link => {
+        link.href = WHATSAPP_LINK;
+      });
+      // Atualiza o link do Instagram
+      document.querySelectorAll('a[href*="seuinsta"]').forEach(link => {
+        link.href = INSTAGRAM_LINK;
+      });
+    });
+  </script>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">💈</span>
+        <span class="font-bold text-lg md:text-xl">Barbeiro Delivery</span>
+        <div class="hidden sm:flex items-center gap-1">
+          <span class="badge">horário marcado</span>
+          <span class="badge">preço transparente</span>
+        </div>
+      </div>
+      <nav class="flex items-center gap-4">
+        <a href="#precos" class="hidden sm:inline text-sm font-medium hover:text-emerald-600 transition">Preços</a>
+        <a href="#pacotes" class="hidden sm:inline text-sm font-medium hover:text-emerald-600 transition">Pacotes</a>
+        <a href="#agenda" class="hidden sm:inline text-sm font-medium hover:text-emerald-600 transition">Agenda</a>
+        <a href="javascript:void(0);" onclick="window.location.href=WHATSAPP_LINK" class="ml-2 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-3 py-2 text-white text-sm font-semibold hover:bg-emerald-700 transition shadow-md hover:shadow-lg">
+          Agendar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-12 md:py-20">
+    <div class="grid lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7">
+        <h1 class="h1">Corte no seu tempo, na sua casa. <span class="text-emerald-600">Sem fila.</span></h1>
+        <!-- CORRIGIDO: Removido ** e adicionado <strong> -->
+        <p class="mt-4 text-lg text-gray-700">Atendimento profissional em <strong>Rio das Pedras, Freguesia/Pechincha/Anil e Barra</strong>. Preços claros, agenda organizada e pontualidade. Sua comodidade é o nosso compromisso.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="javascript:void(0);" onclick="window.location.href=WHATSAPP_LINK" class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 text-white text-lg font-bold hover:bg-emerald-700 transition shadow-xl shadow-emerald-200/50">
+            Agendar no WhatsApp
+          </a>
+          <span class="pill ok text-base">✅ Sinal de 20–50% para confirmar</span>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6 border-l-4 border-emerald-500">
+          <h3 class="h3 mb-3 text-emerald-700">Por que o Delivery?</h3>
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="pill ok">Segurança</span>
+            <span class="pill ok">Tempo</span>
+            <span class="pill ok">Exclusividade</span>
+            <span class="pill warn">Fins de semana: +R$15</span>
+          </div>
+          <!-- CORRIGIDO: Removido ** e adicionado <strong> -->
+          <p class="text-sm text-gray-700">Atendo com materiais higienizados e organização de rota por região para reduzir deslocamento e atrasos. O acréscimo de <strong>+R$15 (Bandeira 2)</strong> é aplicado em noites (após 19h) e finais de semana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preços por região -->
+  <section id="precos" class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="h2 mb-8 text-center md:text-left text-gray-800">💵 Valores Individuais e Taxas</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- RDP em casa -->
+      <div class="card p-5">
+        <h3 class="h3 text-gray-600 mb-4">Rio das Pedras <span class="text-sm block font-normal">(no meu espaço)</span></h3>
+        <ul class="price-list text-base">
+          <li>Corte Máquina <span><strong>R$ 30</strong></span></li>
+          <li>Corte + Tesoura <span><strong>R$ 35</strong></span></li>
+          <li>Corte + Barba <span><strong>R$ 45</strong></span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-500">Opção mais econômica para clientes locais.</p>
+      </div>
+      <!-- RDP delivery - Destaque -->
+      <div class="card premium p-5 lg:col-span-1 border-2">
+        <h3 class="h3 text-emerald-600 mb-4">Rio das Pedras <span class="text-sm block font-normal">(DELIVERY)</span></h3>
+        <ul class="price-list text-base">
+          <li>Corte <span><strong>R$ 60</strong></span></li>
+          <li>Corte + Barba <span><strong>R$ 75</strong></span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-700 font-semibold">Valor já inclui a taxa de deslocamento fixo (R$ 30).</p>
+      </div>
+      <!-- Freguesia/Anil delivery -->
+      <div class="card p-5">
+        <h3 class="h3 text-gray-600 mb-4">Freguesia/Anil/Pechincha <span class="text-sm block font-normal">(DELIVERY)</span></h3>
+        <ul class="price-list text-base">
+          <li>Corte <span><strong>R$ 95</strong></span></li>
+          <li>Corte + Barba <span><strong>R$ 130</strong></span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-500">Preços para rotina quinzenal/mensal.</p>
+      </div>
+      <!-- Barra delivery -->
+      <div class="card p-5">
+        <h3 class="h3 text-gray-600 mb-4">Barra da Tijuca <span class="text-sm block font-normal">(DELIVERY PREMIUM)</span></h3>
+        <ul class="price-list text-base">
+          <li>Corte <span><strong>R$ 130</strong></span></li>
+          <li>Corte + Barba <span><strong>R$ 160</strong></span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-500">Atendimento pontual e discreto em condomínios e consultórios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pacotes -->
+  <section id="pacotes" class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="h2 mb-8 text-center md:text-left text-gray-800">📦 Pacotes Mensais (Fidelidade)</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-5 bg-emerald-50 border-emerald-200">
+        <h3 class="h3 text-emerald-700">Rio das Pedras <span class="text-sm block font-normal">(Delivery)</span></h3>
+        <ul class="mt-3 space-y-2 text-gray-800 font-semibold">
+          <li class="flex justify-between items-center border-b border-emerald-200 pb-1">2 cortes/mês <span><strong>R$ 110</strong></span></li>
+        </ul>
+        <!-- CORRIGIDO: Removido ** e adicionado <strong> -->
+        <p class="mt-3 text-xs text-gray-600">Pacote individual com economia de <strong>R$ 10</strong> no mês (corte individual R$ 60).</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="h3 text-gray-800">Freguesia / Pechincha / Anil</h3>
+        <ul class="mt-3 space-y-2 text-gray-800 font-semibold">
+          <li class="flex justify-between items-center border-b border-gray-100 pb-1">Individual (2/mês) <span><strong>R$ 110–150</strong></span></li>
+          <li class="flex justify-between items-center border-b border-gray-100 pb-1">Pai + Filho <span><strong>R$ 150–160</strong></span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-600">O valor final depende da combinação de serviços (corte ou corte + barba).</p>
+      </div>
+      <div class="card p-5">
+        <h3 class="h3 text-gray-800">Barra — Assinatura VIP</h3>
+        <ul class="mt-3 space-y-2 text-gray-800 font-semibold">
+          <li class="flex justify-between items-center border-b border-gray-100 pb-1">2 cortes/mês <span><strong>R$ 200–250</strong></span></li>
+          <li class="flex justify-between items-center border-b border-gray-100 pb-1">Pai + Filho <span><strong>R$ 250–280</strong></span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-600">Inclui prioridade de agenda e reagendamento flexível.</p>
+      </div>
+    </div>
+    <!-- CORRIGIDO: Removido ** e adicionado <strong> -->
+    <p class="mt-6 text-sm text-gray-700">⚠️ <strong>Observação Bandeira 2:</strong> Pacotes não incluem o acréscimo de <strong>+R$ 15</strong> (Bandeira 2). Esta taxa é aplicada separadamente quando o agendamento cai em noite (após 19h) ou final de semana.</p>
+  </section>
+
+  <!-- Agenda & Rotas -->
+  <section id="agenda" class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="h2 mb-4 text-gray-800">🗓️ Agenda & Políticas de Agendamento</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-5">
+        <h3 class="h3 text-gray-800">Organização de Rota Semanal</h3>
+        <ul class="mt-3 space-y-2 text-gray-800">
+          <li class="font-semibold">🗺️ Terça: <span class="font-normal text-gray-600">Foco em Clientes de Pacotes (Assinantes).</span></li>
+          <li class="font-semibold">🗺️ Quarta: <span class="font-normal text-gray-600">Foco em Clientes de Pacotes (Assinantes).</span></li>
+          <li class="font-semibold">🗺️ Quinta–Sábado: <span class="font-normal text-gray-600">Atendimentos avulsos e Rio das Pedras (prioridade por proximidade).</span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-700 font-semibold">Janela ideal: 10h–16h. Organização por região para máxima pontualidade.</p>
+      </div>
+      <div class="card p-5 border-l-4 border-yellow-500">
+        <h3 class="h3 text-gray-800">Políticas de Confirmação e Cancelamento</h3>
+        <ul class="mt-3 space-y-2 text-gray-800">
+          <!-- CORRIGIDO: Removido ** e adicionado <strong> -->
+          <li class="font-semibold">💲 Confirmação: <span class="font-normal text-gray-600">Sinal de <strong>20–50%</strong> via Pix para garantir o horário.</span></li>
+          <!-- CORRIGIDO: Removido ** e adicionado <strong> -->
+          <li class="font-semibold">⏰ Remarcação: <span class="font-normal text-gray-600">Com <strong>até 6h</strong> de antecedência, sem custo adicional.</span></li>
+          <!-- CORRIGIDO: Removido ** e adicionado <strong> -->
+          <li class="font-semibold">❌ No-Show/Atraso: <span class="font-normal text-gray-600">Sinal <strong>não</strong> é reembolsado, pois o horário foi reservado.</span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-600">Regras claras para manter o fluxo de trabalho e evitar perdas de agenda.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+    <div class="card p-6 md:p-10 bg-emerald-50 border-2 border-emerald-300">
+      <h2 class="h2 mb-4 text-emerald-700">📲 Próximo Passo: Agendamento Exclusivo</h2>
+      <p class="text-gray-700 text-lg">Envie uma mensagem no WhatsApp para confirmar seu bairro, janela de horário de preferência e forma de pagamento. Estou pronto para te atender!</p>
+      <div class="mt-6 flex flex-wrap items-center gap-4">
+        <a href="javascript:void(0);" onclick="window.location.href=WHATSAPP_LINK" class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-white text-lg font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-300/50">
+          Falar com o Barbeiro
+        </a>
+        <a href="javascript:void(0);" onclick="window.location.href=INSTAGRAM_LINK" class="inline-flex items-center gap-2 rounded-xl border border-gray-300 px-6 py-3 text-gray-800 font-semibold hover:bg-gray-100 transition">
+          Ver o Instagram (@luisleonardofigueiredo)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-between">
+      <span>© 2025 Barbeiro Delivery — Rio de Janeiro</span>
+      <span class="mt-1 sm:mt-0">Feito com 💈 pontualidade e organização</span>
+    </div>
+  </footer>
+</body>
+</html>
