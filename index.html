@@ -76,21 +76,28 @@
 
   <!-- JSON-LD LocalBusiness (sem inventar endereço): telefone e áreas atendidas disponíveis no site -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Barbeiro Delivery",
-    "url":"https://leothaylor.github.io/Site-Barbeiro/",
-    "areaServed":["Rio das Pedras","Freguesia","Pechincha","Anil","Barra da Tijuca"],
-    "telephone":"+5521982808635",
-    "image":"https://leothaylor.github.io/Site-Barbeiro/assets/og-image.jpg",
-    "priceRange":"R$",
-    "sameAs":[
-      "https://instagram.com/luisleonardofigueiredo",
-      "https://wa.me/5521982808635"
-    ]
-  }
-  </script>
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Barbeiro Delivery",
+  "url":"https://leothaylor.github.io/Site-Barbeiro/",
+  "areaServed":["Rio das Pedras","Freguesia","Pechincha","Anil","Barra da Tijuca"],
+  "telephone":"+5521982808635",
+  "image":"https://leothaylor.github.io/Site-Barbeiro/assets/og-image.jpg",
+  "priceRange":"R$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Soldado Sebastião Machado, 36",
+    "addressLocality": "Rio das Pedras",
+    "addressRegion": "RJ",
+    "addressCountry": "BR"
+  },
+  "sameAs":[
+    "https://instagram.com/luisleonardofigueiredo",
+    "https://wa.me/5521982808635"
+  ]
+}
+</script>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
   <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
@@ -360,5 +367,6 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
   </footer>
 </body>
 </html>
+
 
 
