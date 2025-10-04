@@ -33,8 +33,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicon (opcional). Salve em assets/img/favicon.svg -->
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <!-- Favicon principal (SVG que você já tem) -->
+<link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
+
+<!-- Fallback legado (.ico) para compatibilidade ampla -->
+<link rel="shortcut icon" href="favicon.ico?v=2">
+
+<!-- Atalhos do iOS (homescreen) -->
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
 
   <style>
     :root { --brand:#059669; --brand-700:#047857; --ink:#111827; --muted:#6B7280; --surface:#ffffff; --surface-2:#F9FAFB; }
@@ -354,3 +360,4 @@
   </footer>
 </body>
 </html>
+
