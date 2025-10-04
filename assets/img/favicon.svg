@@ -1,1 +1,36 @@
-<link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Favicon Barbeiro Delivery LT + Clipper">
+  <defs>
+    <style>
+      .bg{fill:#059669;}
+      .ink{fill:#ffffff;}
+      .stroke{fill:none;stroke:#ffffff;stroke-width:24;stroke-linecap:round;stroke-linejoin:round;}
+    </style>
+  </defs>
+
+  <!-- Fundo circular -->
+  <circle cx="256" cy="256" r="248" class="bg"/>
+
+  <!-- Monograma LT (reforçado para legibilidade em 16px) -->
+  <g aria-hidden="true">
+    <text x="170" y="330" class="ink"
+          font-family="Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif"
+          font-size="240" font-weight="900" text-anchor="middle">L</text>
+    <text x="310" y="330" class="ink"
+          font-family="Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif"
+          font-size="240" font-weight="900" text-anchor="middle">T</text>
+  </g>
+
+  <!-- Máquina de cortar cabelo minimalista à direita -->
+  <g transform="translate(312,188)" aria-hidden="true">
+    <!-- Corpo -->
+    <rect x="0" y="12" rx="28" ry="28" width="124" height="144" class="stroke"/>
+    <!-- Lâminas -->
+    <path d="M12 0 H112" class="stroke"/>
+    <path d="M22 12 v-20 M38 12 v-20 M54 12 v-20 M70 12 v-20 M86 12 v-20 M102 12 v-20" class="stroke"/>
+    <!-- Botão -->
+    <circle cx="98" cy="56" r="10" class="ink"/>
+    <!-- Cabo/curva do fio -->
+    <path d="M62 156 c 0 24 18 36 40 44" class="stroke"/>
+  </g>
+</svg>
