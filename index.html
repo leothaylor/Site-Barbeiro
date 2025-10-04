@@ -11,25 +11,25 @@
   <link rel="canonical" href="https://leothaylor.github.io/Site-Barbeiro/">
   <meta name="robots" content="index,follow,max-image-preview:large">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Barbeiro Delivery — Agenda e Preços">
-<meta property="og:site_name" content="Barbeiro Delivery"> <!-- ← ADICIONE ESTA LINHA -->
-<meta property="og:description" content="Cortes a domicílio com horário marcado. Valores por região, pacotes mensais e contato por WhatsApp.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://leothaylor.github.io/Site-Barbeiro/">
-<meta property="og:image" content="https://leothaylor.github.io/Site-Barbeiro/assets/og-image.jpg?v=3">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  <!-- Performance hints -->
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link rel="dns-prefetch" href="https://instagram.com">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Barbeiro Delivery — Agenda e Preços">
+  <meta property="og:site_name" content="Barbeiro Delivery">
+  <meta property="og:description" content="Cortes a domicílio com horário marcado. Valores por região, pacotes mensais e contato por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leothaylor.github.io/Site-Barbeiro/">
+  <meta property="og:image" content="https://leothaylor.github.io/Site-Barbeiro/assets/og-image.jpg?v=3">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Barbeiro Delivery — Agenda e Preços">
   <meta name="twitter:description" content="Cortes a domicílio com horário marcado. Valores por região, pacotes mensais e contato por WhatsApp.">
   <meta name="twitter:image" content="https://leothaylor.github.io/Site-Barbeiro/assets/og-image.jpg?v=3">
-  <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
 
   <!-- Theming -->
   <meta name="theme-color" content="#059669">
@@ -41,13 +41,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Favicon principal (SVG que você já tem) -->
-<link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
-
-<!-- Fallback legado (.ico) para compatibilidade ampla -->
-<link rel="shortcut icon" href="favicon.ico?v=2">
-
-<!-- Atalhos do iOS (homescreen) -->
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
+  <link rel="icon" href="assets/img/favicon.svg?v=2" type="image/svg+xml">
+  <!-- Fallback legado (.ico) para compatibilidade ampla -->
+  <link rel="shortcut icon" href="favicon.ico?v=2">
+  <!-- Atalhos do iOS (homescreen) -->
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
 
   <style>
     :root { --brand:#059669; --brand-700:#047857; --ink:#111827; --muted:#6B7280; --surface:#ffffff; --surface-2:#F9FAFB; }
@@ -79,47 +77,116 @@
     .skip-link:focus{ left:16px; top:16px; width:auto; height:auto; padding:.5rem .75rem; background:#111827; color:#fff; border-radius:.5rem; z-index:70; }
     /* Menu mobile */
     .mobile-nav[hidden]{ display:none; }
+    /* Botões compactos nas grades de preço */
+    .cta-mini { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; padding:.5rem .75rem; border-radius:.75rem; border:1px solid #E5E7EB; font-size:.825rem; font-weight:600; }
+    .cta-mini:hover { border-color:#D1D5DB; background:#F9FAFB; }
+    /* Avisos e formulários */
+    .help { font-size:.8rem; color:#4B5563; }
+    .req::after { content:" *"; color:#DC2626; }
   </style>
 
-  <!-- JSON-LD LocalBusiness (sem inventar endereço): telefone e áreas atendidas disponíveis no site -->
+  <!-- JSON-LD LocalBusiness (com endereço fornecido, hasMap e byAppointmentOnly) -->
   <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"Barbeiro Delivery",
-  "url":"https://leothaylor.github.io/Site-Barbeiro/",
-  "areaServed":["Rio das Pedras","Freguesia","Pechincha","Anil","Barra da Tijuca"],
-  "telephone":"+5521982808635",
-  "image":"https://leothaylor.github.io/Site-Barbeiro/assets/og-image.jpg",
-  "priceRange":"R$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua Soldado Sebastião Machado, 36",
-    "addressLocality": "Rio das Pedras",
-    "addressRegion": "RJ",
-    "addressCountry": "BR"
-  },
-  "sameAs":[
-    "https://instagram.com/luisleonardofigueiredo",
-    "https://wa.me/5521982808635"
-  ]
-}
-</script>
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Barbeiro Delivery",
+    "url":"https://leothaylor.github.io/Site-Barbeiro/",
+    "areaServed":["Rio das Pedras","Freguesia","Pechincha","Anil","Barra da Tijuca"],
+    "telephone":"+5521982808635",
+    "image":"https://leothaylor.github.io/Site-Barbeiro/assets/og-image.jpg",
+    "priceRange":"R$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Soldado Sebastião Machado, 36",
+      "addressLocality": "Rio das Pedras",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "hasMap": "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C3%A3o%20Machado%2036%2C%20Rio%20das%20Pedras%2C%20Rio%20de%20Janeiro",
+    "additionalProperty": {
+      "@type": "PropertyValue",
+      "name": "byAppointmentOnly",
+      "value": true
+    },
+    "sameAs":[
+      "https://instagram.com/luisleonardofigueiredo",
+      "https://wa.me/5521982808635"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD FAQPage (espelha conteúdos já presentes no site) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Como funciona a confirmação?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sinal de 20–50% via Pix para garantir o horário." }
+    },{
+      "@type": "Question",
+      "name": "Bandeira 2 se aplica quando?",
+      "acceptedAnswer": { "@type": "Answer", "text": "+R$ 15 em noites (após 19h) e finais de semana." }
+    },{
+      "@type": "Question",
+      "name": "Posso remarcar?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Com até 6h de antecedência, sem custo adicional." }
+    },{
+      "@type": "Question",
+      "name": "E no-show/atraso?",
+      "acceptedAnswer": { "@type": "Answer", "text": "O sinal não é reembolsado, pois o horário foi reservado." }
+    },{
+      "@type": "Question",
+      "name": "Quais regiões de atendimento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rio das Pedras, Freguesia/Pechincha/Anil e Barra." }
+    },{
+      "@type": "Question",
+      "name": "Qual a janela ideal de atendimento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "10h–16h, com organização por região." }
+    }]
+  }
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-900 antialiased">
   <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
 
-  <!-- Variáveis (preenchidas com os dados já existentes no site) -->
+  <!-- Variáveis + utilitários -->
   <script defer>
     const MOCK_WHATSAPP = '5521982808635';          // número já usado no site
     const MOCK_INSTAGRAM = 'luisleonardofigueiredo'; // handle já definido
     const WHATSAPP_LINK = `https://wa.me/${MOCK_WHATSAPP}?text=Ol%C3%A1!%20Quero%20agendar%20um%20corte.`;
     const INSTAGRAM_LINK = `https://instagram.com/${MOCK_INSTAGRAM}`;
 
-    // (Opcional) Cole aqui o embed do Google Maps SEM alterar dados do site:
-    // Ex.: const GMAPS_EMBED_URL = "https://www.google.com/maps/embed?...";
-const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C3%A3o%20Machado%2036%2C%20Rio%20das%20Pedras%2C%20Rio%20de%20Janeiro&output=embed";
-    
+    // Mapa (você já preencheu)
+    const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C3%A3o%20Machado%2036%2C%20Rio%20das%20Pedras%2C%20Rio%20de%20Janeiro&output=embed";
+
+    // Gera link do WhatsApp com mensagem estruturada
+    function openWhatsAppMessage(msg) {
+      const base = `https://wa.me/${MOCK_WHATSAPP}?text=` + encodeURIComponent(msg);
+      window.location.href = base;
+    }
+
+    // Mensagem padrão de verificação de disponibilidade
+    function buildMsg({nome='', bairro='', janela='', servico='', pagamento='', obs=''}) {
+      return `Olá! Quero verificar disponibilidade:
+• Nome: ${nome}
+• Bairro: ${bairro}
+• Janela: ${janela}
+• Serviço: ${servico}
+• Preferência de pagamento: ${pagamento || '—'}
+• Observações: ${obs || '—'}
+
+(Enviado pelo site para verificação. Sei que a confirmação será feita por você.)`;
+    }
+
+    // Ações rápidas por card (região + serviço)
+    function agendarRapido(regiao, servico) {
+      const msg = buildMsg({ bairro: regiao, servico, janela: '', nome: '', pagamento:'', obs:'' });
+      openWhatsAppMessage(msg);
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       // Preenche links dinâmicos existentes (back-compat)
       document.querySelectorAll('a[href*="SEU_NUMERO_AQUI"]').forEach(a => a.href = WHATSAPP_LINK);
@@ -136,7 +203,7 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
         });
       }
 
-      // Mapa (só injeta se você preencher GMAPS_EMBED_URL)
+      // Mapa
       if (GMAPS_EMBED_URL) {
         const iframe = document.createElement('iframe');
         iframe.src = GMAPS_EMBED_URL;
@@ -146,6 +213,30 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
         iframe.setAttribute('aria-label','Mapa com a localização de atendimento');
         const holder = document.getElementById('map-holder');
         if (holder) holder.appendChild(iframe);
+      }
+
+      // Formulário de pré-agendamento
+      const form = document.getElementById('form-pre');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const nome = document.getElementById('f-nome').value.trim();
+          const bairro = document.getElementById('f-bairro').value;
+          const janela = document.getElementById('f-janela').value;
+          const servico = document.getElementById('f-servico').value;
+          const pagamento = document.getElementById('f-pagamento').value;
+          const obs = document.getElementById('f-obs').value.trim();
+
+          const requiredOk = nome && bairro && janela && servico && pagamento;
+          const live = document.getElementById('form-live');
+          if (!requiredOk) {
+            live.textContent = 'Preencha todos os campos obrigatórios (Nome, Bairro, Janela, Serviço e Preferência de pagamento).';
+            return;
+          }
+          live.textContent = '';
+          const msg = buildMsg({ nome, bairro, janela, servico, pagamento, obs });
+          openWhatsAppMessage(msg);
+        });
       }
     });
   </script>
@@ -167,6 +258,7 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
         <a href="#precos" class="text-sm font-medium hover:text-emerald-600 transition">Preços</a>
         <a href="#pacotes" class="text-sm font-medium hover:text-emerald-600 transition">Pacotes</a>
         <a href="#agenda" class="text-sm font-medium hover:text-emerald-600 transition">Agenda</a>
+        <a href="#faq" class="text-sm font-medium hover:text-emerald-600 transition">FAQ</a>
         <a href="#contato" class="text-sm font-medium hover:text-emerald-600 transition">Contato</a>
         <a href="javascript:void(0);" onclick="window.location.href=WHATSAPP_LINK" class="ml-2 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-3 py-2 text-white text-sm font-semibold hover:bg-emerald-700 transition shadow-md hover:shadow-lg">
           Agendar
@@ -188,6 +280,7 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
         <a href="#precos" class="py-2">Preços</a>
         <a href="#pacotes" class="py-2">Pacotes</a>
         <a href="#agenda" class="py-2">Agenda</a>
+        <a href="#faq" class="py-2">FAQ</a>
         <a href="#contato" class="py-2">Contato</a>
         <a href="javascript:void(0);" onclick="window.location.href=WHATSAPP_LINK" class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-3 py-2 text-white text-sm font-semibold hover:bg-emerald-700 transition">
           Agendar no WhatsApp
@@ -238,7 +331,14 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
             <li>Corte + Barba <span><strong>R$ 45</strong></span></li>
           </ul>
           <p class="mt-3 text-xs text-gray-500">Opção mais econômica para clientes locais.</p>
+          <!-- CTAs por card -->
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="cta-mini" onclick="agendarRapido('Rio das Pedras (no meu espaço)','Corte Máquina')">WhatsApp: Corte Máquina</button>
+            <button class="cta-mini" onclick="agendarRapido('Rio das Pedras (no meu espaço)','Corte + Tesoura')">WhatsApp: Corte + Tesoura</button>
+            <button class="cta-mini" onclick="agendarRapido('Rio das Pedras (no meu espaço)','Corte + Barba')">WhatsApp: Corte + Barba</button>
+          </div>
         </div>
+
         <!-- RDP delivery - Destaque -->
         <div class="card premium p-5 lg:col-span-1">
           <h3 class="h3 text-emerald-600 mb-4">Rio das Pedras <span class="text-sm block font-normal">(DELIVERY)</span></h3>
@@ -247,7 +347,12 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
             <li>Corte + Barba <span><strong>R$ 75</strong></span></li>
           </ul>
           <p class="mt-3 text-xs text-gray-700 font-semibold">Valor já inclui a taxa de deslocamento fixo (R$ 30).</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="cta-mini" onclick="agendarRapido('Rio das Pedras (Delivery)','Corte')">WhatsApp: Corte</button>
+            <button class="cta-mini" onclick="agendarRapido('Rio das Pedras (Delivery)','Corte + Barba')">WhatsApp: Corte + Barba</button>
+          </div>
         </div>
+
         <!-- Freguesia/Anil delivery -->
         <div class="card p-5">
           <h3 class="h3 text-gray-600 mb-4">Freguesia/Anil/Pechincha <span class="text-sm block font-normal">(DELIVERY)</span></h3>
@@ -256,7 +361,12 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
             <li>Corte + Barba <span><strong>R$ 130</strong></span></li>
           </ul>
           <p class="mt-3 text-xs text-gray-500">Preços para rotina quinzenal/mensal.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="cta-mini" onclick="agendarRapido('Freguesia/Anil/Pechincha (Delivery)','Corte')">WhatsApp: Corte</button>
+            <button class="cta-mini" onclick="agendarRapido('Freguesia/Anil/Pechincha (Delivery)','Corte + Barba')">WhatsApp: Corte + Barba</button>
+          </div>
         </div>
+
         <!-- Barra delivery -->
         <div class="card p-5">
           <h3 class="h3 text-gray-600 mb-4">Barra da Tijuca <span class="text-sm block font-normal">(DELIVERY PREMIUM)</span></h3>
@@ -265,6 +375,10 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
             <li>Corte + Barba <span><strong>R$ 160</strong></span></li>
           </ul>
           <p class="mt-3 text-xs text-gray-500">Atendimento pontual e discreto em condomínios e consultórios.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="cta-mini" onclick="agendarRapido('Barra da Tijuca (Delivery Premium)','Corte')">WhatsApp: Corte</button>
+            <button class="cta-mini" onclick="agendarRapido('Barra da Tijuca (Delivery Premium)','Corte + Barba')">WhatsApp: Corte + Barba</button>
+          </div>
         </div>
       </div>
     </section>
@@ -279,6 +393,9 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
             <li class="flex justify-between items-center border-b border-emerald-200 pb-1">2 cortes/mês <span><strong>R$ 110</strong></span></li>
           </ul>
           <p class="mt-3 text-xs text-gray-600">Pacote individual com economia de <strong>R$ 10</strong> no mês (corte individual R$ 60).</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="cta-mini" onclick="agendarRapido('Rio das Pedras (Delivery) - Pacote','2 cortes/mês')">WhatsApp: 2 cortes/mês</button>
+          </div>
         </div>
         <div class="card p-5">
           <h3 class="h3 text-gray-800">Freguesia / Pechincha / Anil</h3>
@@ -287,6 +404,10 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
             <li class="flex justify-between items-center border-b border-gray-100 pb-1">Pai + Filho <span><strong>R$ 150–160</strong></span></li>
           </ul>
           <p class="mt-3 text-xs text-gray-600">O valor final depende da combinação de serviços (corte ou corte + barba).</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="cta-mini" onclick="agendarRapido('Freguesia/Pechincha/Anil - Pacote','Individual (2/mês)')">WhatsApp: Individual</button>
+            <button class="cta-mini" onclick="agendarRapido('Freguesia/Pechincha/Anil - Pacote','Pai + Filho')">WhatsApp: Pai + Filho</button>
+          </div>
         </div>
         <div class="card p-5">
           <h3 class="h3 text-gray-800">Barra — Assinatura VIP</h3>
@@ -295,6 +416,10 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
             <li class="flex justify-between items-center border-b border-gray-100 pb-1">Pai + Filho <span><strong>R$ 250–280</strong></span></li>
           </ul>
           <p class="mt-3 text-xs text-gray-600">Inclui prioridade de agenda e reagendamento flexível.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="cta-mini" onclick="agendarRapido('Barra - Assinatura VIP','2 cortes/mês')">WhatsApp: 2 cortes/mês</button>
+            <button class="cta-mini" onclick="agendarRapido('Barra - Assinatura VIP','Pai + Filho')">WhatsApp: Pai + Filho</button>
+          </div>
         </div>
       </div>
       <p class="mt-6 text-sm text-gray-700">⚠️ <strong>Observação Bandeira 2:</strong> Pacotes não incluem o acréscimo de <strong>+R$ 15</strong> (Bandeira 2). Esta taxa é aplicada separadamente quando o agendamento cai em noite (após 19h) ou final de semana.</p>
@@ -325,12 +450,113 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
       </div>
     </section>
 
+    <!-- FAQ (curto) -->
+    <section id="faq" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="titulo-faq">
+      <h2 id="titulo-faq" class="h2 mb-6 text-gray-800">❓ FAQ — Perguntas Frequentes</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-5">
+          <h3 class="h3 text-gray-800">Como funciona a confirmação?</h3>
+          <p class="mt-2 text-sm text-gray-700">Sinal de <strong>20–50%</strong> via Pix para garantir o horário.</p>
+        </div>
+        <div class="card p-5">
+          <h3 class="h3 text-gray-800">Bandeira 2 se aplica quando?</h3>
+          <p class="mt-2 text-sm text-gray-700"><strong>+R$ 15</strong> em <strong>noites (após 19h)</strong> e <strong>finais de semana</strong>.</p>
+        </div>
+        <div class="card p-5">
+          <h3 class="h3 text-gray-800">Posso remarcar?</h3>
+          <p class="mt-2 text-sm text-gray-700">Com <strong>até 6h</strong> de antecedência, sem custo adicional.</p>
+        </div>
+        <div class="card p-5">
+          <h3 class="h3 text-gray-800">E no-show/atraso?</h3>
+          <p class="mt-2 text-sm text-gray-700">O <strong>sinal não é reembolsado</strong>, pois o horário foi reservado.</p>
+        </div>
+        <div class="card p-5">
+          <h3 class="h3 text-gray-800">Quais regiões atendo?</h3>
+          <p class="mt-2 text-sm text-gray-700"><strong>Rio das Pedras, Freguesia/Pechincha/Anil e Barra</strong>.</p>
+        </div>
+        <div class="card p-5">
+          <h3 class="h3 text-gray-800">Janela ideal de atendimento</h3>
+          <p class="mt-2 text-sm text-gray-700"><strong>10h–16h</strong> (organização por região).</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Contato -->
     <section id="contato" class="max-w-6xl mx-auto px-4 py-12 md:py-16" aria-labelledby="titulo-contato">
       <div class="card p-6 md:p-10 bg-emerald-50 border-2 border-emerald-300">
         <h2 id="titulo-contato" class="h2 mb-4 text-emerald-700">📲 Próximo Passo: Agendamento Exclusivo</h2>
         <p class="text-gray-700 text-lg">Envie uma mensagem no WhatsApp para confirmar seu bairro, janela de horário de preferência e forma de pagamento. Estou pronto para te atender!</p>
-        <div class="mt-6 flex flex-wrap items-center gap-4">
+
+        <!-- Formulário de Pré-agendamento (verificação de disponibilidade) -->
+        <div class="mt-8">
+          <h3 class="h3 text-gray-800 mb-2">Pré-agendamento (verificação de disponibilidade)</h3>
+          <p class="help">Preencha os dados abaixo para <strong>verificar disponibilidade</strong> no horário desejado. A confirmação é feita por mim no WhatsApp.</p>
+
+          <form id="form-pre" class="mt-4 grid md:grid-cols-2 gap-4" novalidate>
+            <div>
+              <label for="f-nome" class="block text-sm font-semibold req">Nome completo</label>
+              <input id="f-nome" name="nome" type="text" class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2" placeholder="Seu nome" required>
+            </div>
+
+            <div>
+              <label for="f-bairro" class="block text-sm font-semibold req">Bairro</label>
+              <select id="f-bairro" name="bairro" class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>Rio das Pedras</option>
+                <option>Freguesia</option>
+                <option>Pechincha</option>
+                <option>Anil</option>
+                <option>Barra da Tijuca</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="f-janela" class="block text-sm font-semibold req">Janela de horário</label>
+              <select id="f-janela" name="janela" class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>10–12</option>
+                <option>12–14</option>
+                <option>14–16</option>
+                <option>16–18</option>
+                <option>18–20</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="f-servico" class="block text-sm font-semibold req">Serviço</label>
+              <select id="f-servico" name="servico" class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>Corte</option>
+                <option>Corte + Barba</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="f-pagamento" class="block text-sm font-semibold req">Preferência de pagamento</label>
+              <select id="f-pagamento" name="pagamento" class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>Pix</option>
+                <option>Dinheiro</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="f-obs" class="block text-sm font-semibold">Observações (opcional)</label>
+              <input id="f-obs" name="obs" type="text" class="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2" placeholder="Ex.: condomínio, portaria, preferência...">
+            </div>
+
+            <div class="md:col-span-2">
+              <button type="submit" class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-white font-bold hover:bg-emerald-700 transition shadow">
+                Enviar no WhatsApp (verificar disponibilidade)
+              </button>
+              <p id="form-live" class="help mt-2" aria-live="polite"></p>
+              <p class="help mt-1">→ Este envio <strong>NÃO</strong> confirma horário. Você receberá a confirmação no WhatsApp.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Botões padrão -->
+        <div class="mt-8 flex flex-wrap items-center gap-4">
           <a href="javascript:void(0);" onclick="window.location.href=WHATSAPP_LINK" class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-white text-lg font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-300/50">
             Falar com o Barbeiro
           </a>
@@ -339,7 +565,19 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
           </a>
         </div>
 
-        <!-- Mapa (placeholder seguro, sem inventar dados). Preencha GMAPS_EMBED_URL no topo do arquivo. -->
+        <!-- QR WhatsApp (opcional) -->
+        <div class="mt-6">
+          <details class="group">
+            <summary class="cursor-pointer text-sm text-gray-700">Ver QR Code do WhatsApp (opcional para imprimir)</summary>
+            <div class="mt-3 flex items-center gap-4">
+              <!-- Salve a imagem em assets/img/qr-wa.png se quiser usar -->
+              <img src="assets/img/qr-wa.png" alt="QR para abrir conversa no WhatsApp" class="w-32 h-32 border border-gray-200 rounded-lg bg-white object-contain">
+              <p class="help">Se quiser usar, salve um QR em <code>assets/img/qr-wa.png</code> apontando para <code>https://wa.me/5521982808635</code> (pode incluir mensagem padrão também).</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Mapa -->
         <div class="mt-8">
           <h3 class="h3 text-gray-800 mb-2">Como chegar</h3>
           <div id="map-holder" class="w-full rounded-xl bg-white border border-dashed border-gray-300 p-4 text-sm text-gray-600">
@@ -374,7 +612,3 @@ const GMAPS_EMBED_URL = "https://www.google.com/maps?q=Rua%20Soldado%20Sebasti%C
   </footer>
 </body>
 </html>
-
-
-
-
